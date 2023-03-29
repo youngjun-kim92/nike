@@ -1,0 +1,152 @@
+/* 미디어 쿼리 480px 이하(모바일용) */
+@media screen and (max-width:480px) {
+    .h_top {
+        width: 80%;
+        height: auto;
+        background-color: #fff;
+    }
+    .main_menu {
+        padding: 40px 24px 32px 24px;
+    }
+    .jordan_logo a {
+        padding-left: 24px;
+        margin-bottom: 32px;
+    }
+    .top_menu_area, .customer {
+        padding: 40px 24px;
+    }
+    header {
+        height: 48px;
+    }
+    .logo img {
+        height: 18px;
+    }
+    .sub_menu {
+        padding-top: 40px;
+        padding-left: 24px;
+    }
+    .icon_menu img {
+        height: 20px;
+    }
+    .icon_menu ul li {
+        margin-left: 14px;
+    }
+    #index_wrap {
+        padding: 0 16px;
+    }
+    /* 메인 타이틀 */
+    .main_visual, .content {
+        margin-bottom: 48px;
+    }
+    .title_01 {
+        font-size: 1.5em;
+        padding-top: 24px;
+    }
+    .title_01_text {
+        font-size: 0.8125em;
+        padding: 12px 10px 0 10px;
+    }
+    .title_01_text br {
+        display: none;
+    }
+    .btn_01 {
+        font-size: 0.75em;
+        padding: 4px 16px;
+        margin: 18px 4px 0 4px;
+        border-radius: 13px;
+    }
+    /* 이번주 스타일링 */
+    .content_img_wrap {
+        width: 100%;
+        overflow: scroll;
+        /* IE, Edge에서 스크롤바 안보이게 */
+        -ms-overflow-style: none;
+    }
+    /* 크롬, 사파리에서 스크롤바 안보이게 */
+    .content_img_wrap::-webkit-scrollbar {
+        display: none;
+    }
+    .content_img {
+        width: 622px;
+        display: block;
+    }
+    .content_img>.main_img {
+        float: left;
+        margin-right: 8px;
+        width: 202px;
+    }
+    .content_title {
+        font-size: 1em;
+        margin-bottom: 12px;
+    }
+    /* Trending Now */
+    .trend {
+        width: 100%;
+        display: flex;
+        flex-wrap: row wrap;
+    }
+    .trend_img {
+        width: 100%;
+        flex: none;
+    }
+    .trend_img:first-child {
+        margin-right: 0;
+        margin-bottom: 12px;
+    }
+    .trend_img>img {
+        width: 100%;
+    }
+    .trend_text {
+        bottom: 18px;
+        left: 18px;
+    }
+    .c_white {
+        margin-bottom: 8px;
+    }
+    .b_white {
+        margin: 0;
+    }
+    /* swiper 슬라이드 */
+    .Featured_slide, .swiper-slide {
+        width: 60%;
+    }
+    .featured_title {
+        font-size: 0.8125em;
+        margin-top: 12px;
+    }
+    .featured_text {
+        font-size: 0.6875em;
+        line-height: 14px;
+        margin-top: 4px;
+    }
+    .featured_control {
+        width: 52px;
+        height: 16px;
+        top: 3px;
+    }
+    .f_prev, .f_next {
+        width: 16px;
+        height: 16px;
+        margin-top: 0;
+        top: 0;
+    }
+    .f_prev::after, .f_next::after {
+        font-size: 0.75em;
+        color: #999;
+    }
+    .f_pager {
+        bottom: 1px;
+        font-size: 0.6875em;
+    }
+    /* 푸터(footer) */
+    .f_bottom p {
+        box-sizing: border-box;
+        padding: 0 4%;
+    }
+    .inipay br {
+        display: none;
+    }
+    .inipay p:last-child {
+        flex-direction: column;
+    }
+}

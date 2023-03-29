@@ -1,0 +1,186 @@
+/* 공통 모듈 */
+html,body,div,header,nav,section,article,footer,ul,li,h1,h2,h3,h4,p {
+    margin: 0;
+    padding: 0;
+}
+html,body {
+    height: 100%;
+    font-family: 'Spoqa Han Sans';
+    font-weight: 300;
+    color: #111;
+    font-size: 16px;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #111;
+}
+img {
+    display: block;
+}
+ 
+/* 헤더 공통 모듈 */
+header {
+    height: 64px;
+    position: relative;
+    z-index: 10;
+    display: flex;
+}
+.logo,nav,.icon_menu {
+    position: absolute;
+}
+.logo {
+    top: 50%;                       /* 위치 */
+    left: 0;                        /* 반응형 웹은 보통 %로 함 */
+    transform: translateY(-50%);    /* header 높이의 정중앙에서 이미지의 반을 올리면 정확히 header의 가운데로 오게 된다 */
+}
+nav {
+    height: 100%;                   /* 부모의 높이를 다 차지함 */
+    left: 50%;                      /* 마찬가지로 중앙에 위치 */
+    transform: translateX(-50%);    /* header의 중앙에 위치시키기 위함 */
+    top: 0;
+}
+.main_menu, .icon_menu ul {
+    display: flex;
+}
+.icon_menu {
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+.icon_menu ul li {
+    margin-left: 18px;
+}
+.menu_btn {
+    display: none;
+}
+.hidden_menu {
+    display: none;
+}
+.main_menu>li>a {
+    box-sizing: border-box;             /* a에 hover를 줬을 때*/
+    height: 64px;
+    border-bottom: 2px solid white;   /* hover 했을 때 글자가 올라가는 것을 방지해줌(미리 밑줄을 그어서 이미 글자가 올라가있는 상태) */
+    display: flex;                      /* flex를 주게되면 일렬로 옆으로 배열(기본값이 row) */
+    align-items: center;                /* flex와 관계된 속성으로 가운데로 모아줌 */
+    padding: 0 32px;
+    font-family: 'Lato';
+    font-size: 1em;
+    font-weight: 400;
+    white-space: nowrap;                /* 줄바꿈 안함 */
+}
+.main_menu>li:last-child>a {
+    color: #2ba007;
+}
+.main_menu>li:last-child:hover>a {
+    border-bottom: 2px solid white;
+}
+.main_menu>li:hover>a {
+    border-bottom: 2px solid #111;
+}
+.sub_menu {
+    display: none;
+    text-align: center;
+    padding-top: 26px;
+}
+.sub_menu li {
+    line-height: 26px;
+}
+.sub_menu li a {
+    font-size: 0.875em;
+    color: #757575;
+    letter-spacing: -0.2px;
+}
+.all {
+    display: none;                  /* 데스크탑에서는 안보이게 */
+}
+.sub_menu:hover .sub_menu {         /* 상위메뉴 호버하면 하위메뉴 전부 보이게 */
+    display: block;
+}
+.sub_bg {
+    width: 100%;
+    height: 230px;
+    background-color: white;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    z-index: 5;
+    display: none;
+}
+/* 푸터 공통 모듈 */
+footer {
+    background-color: #111;
+    color: white;
+}
+footer a {
+    color: white;
+}
+.f_top, .f_bottom {
+    width: 1024px;                  /* 내용물을 가운데로 오게 해줌(1024px에 맞춰서 항상 가운데로 옴) */
+    margin: 0 auto;
+    padding: 40px 0;
+    font-size: 0.6875em;
+}
+.f_line {
+    border-top: 1px solid #333;
+}
+.f_top, .f_info {
+    display: flex;
+    justify-content: space-between; /* 부모 영역을 배분 정렬 */
+}
+.f_mobile {
+    display: none;
+}
+.f_menu>li {
+    line-height: 30px;
+}
+.f_menu>li>a {
+    font-size: 0.875em;
+}
+.f_sub li {
+    line-height: 24px;
+}
+.f_sub a {
+    color: #aaa;
+}
+.social .f_sub {
+    display: flex;
+}
+.social .f_sub li {
+    width: 24px;
+    height: 24px;
+    border-radius: 12px;
+    background-color: #444;
+    text-align: center;
+    margin-right: 6px;
+    font-size: 0.875em;
+}
+.f_bottom ul {
+    display: flex;
+    margin-bottom: 32px;
+}
+.f_bottom ul li {
+    font-size: 0.875em;
+    margin-right: 16px;
+}
+.f_bottom p {
+    color: #aaa;
+    letter-spacing: 0.5px;
+}
+.f_info>p br:nth-child(1), .f_info>p br:nth-child(3), .f_info>p br:nth-child(6) {
+    display: none;
+}
+.inipay p:last-child {
+    display: flex;
+    align-items: center;
+    margin-top: 32px;
+}
+.inipay p:last-child img {
+    margin-left: 16px;
+}
+.inipay p:last-child a {
+    margin-left: 8px;
+    text-decoration: underline;
+}
